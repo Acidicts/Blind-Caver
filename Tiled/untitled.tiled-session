@@ -3,16 +3,20 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "",
+    "activeFile": "F:/PycharmProject/Blind Caver/map/untitled.tmx",
     "expandedProjectPaths": [
     ],
     "fileStates": {
+        "F:/PycharmProject/Blind Caver/map/stone.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
         "F:/PycharmProject/Blind Caver/map/untitled.tmx": {
-            "scale": 0.75,
+            "scale": 1.23203125,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 298.66666666666663,
-                "y": 615.3333333333333
+                "x": 262.16867469879514,
+                "y": 320.20291693088143
             }
         }
     },
@@ -20,9 +24,12 @@
     "map.fixedSize": true,
     "map.lastUsedFormat": "tmx",
     "openFiles": [
+        "F:/PycharmProject/Blind Caver/map/stone.tsx",
+        "F:/PycharmProject/Blind Caver/map/untitled.tmx"
     ],
     "project": "untitled.tiled-project",
     "recentFiles": [
+        "F:/PycharmProject/Blind Caver/map/stone.tsx",
         "F:/PycharmProject/Blind Caver/map/untitled.tmx"
     ],
     "tileset.lastUsedFormat": "tsx"
