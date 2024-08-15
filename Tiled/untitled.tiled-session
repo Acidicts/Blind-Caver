@@ -1,0 +1,29 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "",
+    "expandedProjectPaths": [
+    ],
+    "fileStates": {
+        "F:/PycharmProject/Blind Caver/map/untitled.tmx": {
+            "scale": 0.75,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 298.66666666666663,
+                "y": 615.3333333333333
+            }
+        }
+    },
+    "last.imagePath": "F:/PycharmProject/Blind Caver/graphics",
+    "map.fixedSize": true,
+    "map.lastUsedFormat": "tmx",
+    "openFiles": [
+    ],
+    "project": "untitled.tiled-project",
+    "recentFiles": [
+        "F:/PycharmProject/Blind Caver/map/untitled.tmx"
+    ],
+    "tileset.lastUsedFormat": "tsx"
+}
