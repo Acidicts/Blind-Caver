@@ -13,10 +13,13 @@ class Sprite(pygame.sprite.Sprite):
             self.image.fill(color)
 
         self.rect = self.image.get_rect(center=pos)
+        self.old_rect = self.rect.copy()
         self.hitbox = self.rect.copy()
 
-    def update(self):
+    def update(self, dt):
         self.rect.center = self.hitbox.center
+
+        self.old_rect.center = self.rect.center
 
     def draw(self, surface):
         surface.blit(self.image, self.rect.topleft)

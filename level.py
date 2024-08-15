@@ -1,5 +1,6 @@
 from settings import *
 from sprites import Sprite
+from player import Player
 from pytmx.util_pygame import load_pygame
 
 
@@ -20,12 +21,19 @@ class Level:
         tmx_data = load_pygame(self.map)
 
         # noinspection PyTypeChecker
-        for x, y, img in tmx_data.get_layer_by_name('Stone'):
-            Sprite((x * TILE_SIZE, y * TILE_SIZE), pygame.image.load(BASE_PATH + '/graphics/stone.png'), [self.all_sprites, self.obstacle_sprites])
+        for x, y, img in tmx_data.get_layer_by_name('Stone').tiles():
+            Sprite((x * TILE_SIZE, y * TILE_SIZE), pygame.image.load(BASE_PATH + '/graphics/stone.png'), [self.obstacle_sprites])
+
+        # noinspection PyTypeChecker
+        for obj in tmx_data.get_layer_by_name('Points'):
+            # noinspection PyTypeChecker
+            self.player = Player((obj.x, obj.y), None, [self.all_sprites],
+                                 self.obstacle_sprites)
 
     def run(self, dt):
         self.display_surface.fill((0, 0, 0))
         self.all_sprites.custom_draw()
+        self.all_sprites.update(dt, self.player, self.obstacle_sprites)
 
 
 class AllSprites(pygame.sprite.Group):
@@ -47,7 +55,3 @@ class AllSprites(pygame.sprite.Group):
 
         for sprite in self.sprites():
             sprite.update(dt)
-
-        for collider in colliders:
-            offset_rect = (collider.rect.topleft - self.offset, (collider.rect.width, collider.rect.height))
-            pygame.draw.rect(pygame.display.get_surface(), (255, 0, 0), offset_rect, 2)

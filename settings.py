@@ -1,6 +1,7 @@
 import pygame
 import os
 from pygame.math import Vector2
+from timer import Timer
 
 
 WIDTH, HEIGHT = 800, 600
